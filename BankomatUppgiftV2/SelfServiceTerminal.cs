@@ -1,26 +1,18 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿using System.Reflection;
 using System.Text.RegularExpressions;
-using System.Threading.Tasks;
 
 namespace BankomatUppgiftV2
 {
-    internal class AccountsManager
+    internal class SelfServiceTerminal
     {
-        private List<Account> accounts = new List<Account>();
+        private TheBank? bank;
 
-        public void RunApp()
+        public SelfServiceTerminal(TheBank? bank)
         {
-            while (true)
-            {
-                MainMenu();
-                HandleMainMenu();
-            }
+            this.bank = bank;
         }
 
-        private void MainMenu()
+        public void ShowMainMenu()
         {
             Console.WriteLine("\n---------------- HUVUDMENY ----------------");
             Console.WriteLine("1: Registrera ett nytt konto");
@@ -41,7 +33,7 @@ namespace BankomatUppgiftV2
             Console.Write("Ange ditt val (1-5): ");
         }
 
-        private void HandleMainMenu()
+        public void HandleMainMenu()
         {
             if (!int.TryParse(Console.ReadLine(), out int choice) || choice < 1 || choice > 4)
             {
@@ -152,29 +144,31 @@ namespace BankomatUppgiftV2
             }
 
             // Skapa konto och lägg till i listan
-            Account newAccount = new Account(firstName, lastName, accountNumber, balance);
-            accounts.Add(newAccount);
+            Account newAccount = new Account(bank!, firstName, lastName, accountNumber, balance);
+            bank!.Accounts.Add(newAccount);
             Console.WriteLine("Kontot har registrerats framgångsrikt.");
         }
 
         private void ReadAllRegAccounts()
         {
             Console.WriteLine("\n----- Lista över registrerade konton -----");
-            if (accounts.Count == 0)
+            if (bank?.Accounts == null || bank.Accounts.Count == 0)
             {
                 Console.WriteLine("Inga konton har registrerats än.");
                 return;
             }
-
-            foreach (var acc in accounts)
+            else
             {
-                Console.WriteLine($"Namn: {acc.FirstName} {acc.LastName} | Kontonummer: {acc.AccountNumber} | Saldo: {acc.Balance:C}");
+                foreach (var acc in bank.Accounts)
+                {
+                    Console.WriteLine($"Namn: {acc.FirstName} {acc.LastName} | Kontonummer: {acc.AccountNumber} | Saldo: {acc.Balance:C}");
+                }
             }
         }
 
         private void Deposit()
         {
-            if (accounts.Count == 0)
+            if (bank?.Accounts == null || bank.Accounts.Count == 0)
             {
                 Console.WriteLine("Inga konton har registrerats än.");
                 return;
@@ -187,7 +181,7 @@ namespace BankomatUppgiftV2
                 return;
             }
 
-            var activeAccount = accounts.SingleOrDefault(x => x.AccountNumber == activeAccountNumber);
+            var activeAccount = bank.Accounts.SingleOrDefault(x => x.AccountNumber == activeAccountNumber);
             if (activeAccount == null)
             {
                 Console.WriteLine("Kontot hittades inte.");
@@ -214,7 +208,7 @@ namespace BankomatUppgiftV2
 
         private void Withdraw()
         {
-            if (accounts.Count == 0)
+            if (bank?.Accounts == null || bank.Accounts.Count == 0)
             {
                 Console.WriteLine("Inga konton har registrerats än.");
                 return;
@@ -227,7 +221,7 @@ namespace BankomatUppgiftV2
                 return;
             }
 
-            var activeAccount = accounts.SingleOrDefault(x => x.AccountNumber == activeAccountNumber);
+            var activeAccount = bank.Accounts.SingleOrDefault(x => x.AccountNumber == activeAccountNumber);
             if (activeAccount == null)
             {
                 Console.WriteLine("Kontot hittades inte.");
@@ -263,7 +257,7 @@ namespace BankomatUppgiftV2
 
         private void ViewBalance()
         {
-            if (accounts.Count == 0)
+            if (bank?.Accounts == null || bank.Accounts.Count == 0)
             {
                 Console.WriteLine("Inga konton har registrerats än.");
                 return;
@@ -276,7 +270,7 @@ namespace BankomatUppgiftV2
                 return;
             }
 
-            var activeAccount = accounts.SingleOrDefault(x => x.AccountNumber == activeAccountNumber);
+            var activeAccount = bank.Accounts.SingleOrDefault(x => x.AccountNumber == activeAccountNumber);
             if (activeAccount == null)
             {
                 Console.WriteLine("Kontot hittades inte.");
@@ -292,3 +286,4 @@ namespace BankomatUppgiftV2
         }
     }
 }
+

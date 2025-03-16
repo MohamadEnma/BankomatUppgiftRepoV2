@@ -1,11 +1,18 @@
-﻿namespace BankomatUppgiftV2
+﻿using System.Threading.Channels;
+
+namespace BankomatUppgiftV2
 {
     internal class Program
     {
         static void Main(string[] args)
         {
-            var app = new AccountsManager();
-            app.RunApp();
+            TheBank bank = new TheBank();
+            SelfServiceTerminal terminal = new SelfServiceTerminal(bank);
+            while (true)
+            {
+                terminal.ShowMainMenu();
+                terminal.HandleMainMenu();
+            }
         }
     }
 }
