@@ -28,9 +28,10 @@ namespace BankomatUppgiftV2
             Console.WriteLine("1: Gör en insättning");
             Console.WriteLine("2: Gör ett uttag");
             Console.WriteLine("3: Visa saldo");
-            Console.WriteLine("4: Gå tillbaka till huvudmenyn");
-            Console.WriteLine("5: Avsluta applikationen");
-            Console.Write("Ange ditt val (1-5): ");
+            Console.WriteLine("4: Visa transaktionshistorik ");
+            Console.WriteLine("5: Gå tillbaka till huvudmenyn");
+            Console.WriteLine("6: Avsluta applikationen");
+            Console.Write("Ange ditt val (1-6): ");
         }
 
         public void HandleMainMenu()
@@ -68,9 +69,9 @@ namespace BankomatUppgiftV2
 
         private void HandleAccountMenu()
         {
-            if (!int.TryParse(Console.ReadLine(), out int choice) || choice < 1 || choice > 5)
+            if (!int.TryParse(Console.ReadLine(), out int choice) || choice < 1 || choice > 6)
             {
-                Console.WriteLine("Felaktig inmatning. Ange ett tal mellan 1 och 5.");
+                Console.WriteLine("Felaktig inmatning. Ange ett tal mellan 1 och 6.");
                 return;
             }
 
@@ -90,8 +91,12 @@ namespace BankomatUppgiftV2
                     break;
                 case 4:
                     Console.Clear();
-                    return;
+                    ViewTransactionHistory();
+                    break;
                 case 5:
+                    Console.Clear();
+                    return;
+                case 6:
                     Console.Clear();
                     EndApp();
                     break;
@@ -99,6 +104,31 @@ namespace BankomatUppgiftV2
                     Console.WriteLine("Okänt val, försök igen.");
                     break;
             }
+        }
+
+        private void ViewTransactionHistory()
+        {
+            if (bank?.Accounts == null || bank.Accounts.Count == 0)
+            {
+                Console.WriteLine("Inga konton har registrerats än.");
+                return;
+            }
+
+            Console.Write("Ange kontonummer: ");
+            if (!int.TryParse(Console.ReadLine()?.Trim(), out int activeAccountNumber))
+            {
+                Console.WriteLine("Felaktigt kontonummer.");
+                return;
+            }
+
+            var activeAccount = bank.Accounts.SingleOrDefault(x => x.AccountNumber == activeAccountNumber);
+            if (activeAccount == null)
+            {
+                Console.WriteLine("Kontot hittades inte.");
+                return;
+            }
+
+            activeAccount.TransctionsHistory();
         }
 
         private void RegisterNewAccount()

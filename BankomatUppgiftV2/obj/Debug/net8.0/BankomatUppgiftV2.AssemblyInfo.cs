@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("BankomatUppgiftV2")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ac420f833d35c39c657dd5551facff7a777f745a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9d120157fa404615b8db64331265645103b1422b")]
 [assembly: System.Reflection.AssemblyProductAttribute("BankomatUppgiftV2")]
 [assembly: System.Reflection.AssemblyTitleAttribute("BankomatUppgiftV2")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -14,6 +14,7 @@ namespace BankomatUppgiftV2
         public int AccountNumber { get; } = accountNumber;
         public decimal Balance { get; private set; } = balance;
 
+        public List<Transction> Transactions { get; } = new List<Transction>();
         public void Deposit(decimal amount)
         {
             if (amount <= 0)
@@ -21,6 +22,9 @@ namespace BankomatUppgiftV2
                 throw new ArgumentException("Insättningsbeloppet måste vara större än 0.");
             }
             Balance += amount;
+
+            var transnsction = new Transction() { TransactionDate = DateTimeOffset.Now, TypOfTransction = "Deposit", TransctionAmount = amount};
+            Transactions.Add(transnsction);
         }
 
         public void Withdraw(decimal amount)
@@ -34,6 +38,17 @@ namespace BankomatUppgiftV2
                 throw new ArgumentException("Det finns inte tillräckligt med pengar på kontot.");
             }
             Balance -= amount;
+            var transnsction = new Transction() { TransactionDate = DateTimeOffset.Now, TypOfTransction = "Withdraw", TransctionAmount = amount };
+            Transactions.Add(transnsction);
+        }
+
+        public void TransctionsHistory()
+        {
+            foreach (var trans in Transactions)
+            {
+                Console.WriteLine(trans);
+            }
+
         }
     }
 }
