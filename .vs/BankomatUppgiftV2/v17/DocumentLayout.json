@@ -1,17 +1,17 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\moham\\OneDrive\\Desktop\\C#\\BankomatUppgiftV2\\",
+  "WorkspaceRootPath": "C:\\Users\\moham\\OneDrive\\Desktop\\C#\\C#1\\BankomatUppgiftV2\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F5206891-6834-4E7B-8A47-8A8057CE4FAF}|BankomatUppgiftV2\\BankomatUppgiftV2.csproj|c:\\users\\moham\\onedrive\\desktop\\c#\\bankomatuppgiftv2\\bankomatuppgiftv2\\accountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5206891-6834-4E7B-8A47-8A8057CE4FAF}|BankomatUppgiftV2\\BankomatUppgiftV2.csproj|solutionrelative:bankomatuppgiftv2\\accountmanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F5206891-6834-4E7B-8A47-8A8057CE4FAF}|BankomatUppgiftV2\\BankomatUppgiftV2.csproj|c:\\users\\moham\\onedrive\\desktop\\c#\\c#1\\bankomatuppgiftv2\\bankomatuppgiftv2\\transction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5206891-6834-4E7B-8A47-8A8057CE4FAF}|BankomatUppgiftV2\\BankomatUppgiftV2.csproj|solutionrelative:bankomatuppgiftv2\\transction.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5206891-6834-4E7B-8A47-8A8057CE4FAF}|BankomatUppgiftV2\\BankomatUppgiftV2.csproj|c:\\users\\moham\\onedrive\\desktop\\c#\\bankomatuppgiftv2\\bankomatuppgiftv2\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F5206891-6834-4E7B-8A47-8A8057CE4FAF}|BankomatUppgiftV2\\BankomatUppgiftV2.csproj|solutionrelative:bankomatuppgiftv2\\account.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{F5206891-6834-4E7B-8A47-8A8057CE4FAF}|BankomatUppgiftV2\\BankomatUppgiftV2.csproj|c:\\users\\moham\\onedrive\\desktop\\c#\\c#1\\bankomatuppgiftv2\\bankomatuppgiftv2\\thebank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F5206891-6834-4E7B-8A47-8A8057CE4FAF}|BankomatUppgiftV2\\BankomatUppgiftV2.csproj|solutionrelative:bankomatuppgiftv2\\thebank.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F5206891-6834-4E7B-8A47-8A8057CE4FAF}|BankomatUppgiftV2\\BankomatUppgiftV2.csproj|c:\\users\\moham\\onedrive\\desktop\\c#\\bankomatuppgiftv2\\bankomatuppgiftv2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F5206891-6834-4E7B-8A47-8A8057CE4FAF}|BankomatUppgiftV2\\BankomatUppgiftV2.csproj|c:\\users\\moham\\onedrive\\desktop\\c#\\c#1\\bankomatuppgiftv2\\bankomatuppgiftv2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F5206891-6834-4E7B-8A47-8A8057CE4FAF}|BankomatUppgiftV2\\BankomatUppgiftV2.csproj|solutionrelative:bankomatuppgiftv2\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -22,51 +22,43 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 1,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
-            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "AccountManager.cs",
-              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\C#\\BankomatUppgiftV2\\BankomatUppgiftV2\\AccountManager.cs",
-              "RelativeDocumentMoniker": "BankomatUppgiftV2\\AccountManager.cs",
-              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\C#\\BankomatUppgiftV2\\BankomatUppgiftV2\\AccountManager.cs",
-              "RelativeToolTip": "BankomatUppgiftV2\\AccountManager.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAcAAAAAAAAAA==",
+              "Title": "Transction.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\C#\\C#1\\BankomatUppgiftV2\\BankomatUppgiftV2\\Transction.cs",
+              "RelativeDocumentMoniker": "BankomatUppgiftV2\\Transction.cs",
+              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\C#\\C#1\\BankomatUppgiftV2\\BankomatUppgiftV2\\Transction.cs",
+              "RelativeToolTip": "BankomatUppgiftV2\\Transction.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAMwBMAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T22:12:44.985Z",
+              "WhenOpened": "2025-03-17T00:18:49.945Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "Account.cs",
-              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\C#\\BankomatUppgiftV2\\BankomatUppgiftV2\\Account.cs",
-              "RelativeDocumentMoniker": "BankomatUppgiftV2\\Account.cs",
-              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\C#\\BankomatUppgiftV2\\BankomatUppgiftV2\\Account.cs",
-              "RelativeToolTip": "BankomatUppgiftV2\\Account.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAACIAAAAJAAAAAAAAAA==",
+              "Title": "TheBank.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\C#\\C#1\\BankomatUppgiftV2\\BankomatUppgiftV2\\TheBank.cs",
+              "RelativeDocumentMoniker": "BankomatUppgiftV2\\TheBank.cs",
+              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\C#\\C#1\\BankomatUppgiftV2\\BankomatUppgiftV2\\TheBank.cs",
+              "RelativeToolTip": "BankomatUppgiftV2\\TheBank.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-02-15T22:11:46.455Z",
+              "WhenOpened": "2025-03-16T01:03:26.996Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\C#\\BankomatUppgiftV2\\BankomatUppgiftV2\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\moham\\OneDrive\\Desktop\\C#\\C#1\\BankomatUppgiftV2\\BankomatUppgiftV2\\Program.cs",
               "RelativeDocumentMoniker": "BankomatUppgiftV2\\Program.cs",
-              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\C#\\BankomatUppgiftV2\\BankomatUppgiftV2\\Program.cs",
+              "ToolTip": "C:\\Users\\moham\\OneDrive\\Desktop\\C#\\C#1\\BankomatUppgiftV2\\BankomatUppgiftV2\\Program.cs",
               "RelativeToolTip": "BankomatUppgiftV2\\Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-02-15T22:11:19.025Z"
             }
